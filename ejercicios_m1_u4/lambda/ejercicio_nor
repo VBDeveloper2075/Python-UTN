@@ -1,0 +1,27 @@
+def crecer(edad):
+    i = 1
+    edadnumero = int(edad)
+    k = edad
+    for i in range(i, edadnumero + 1):
+        if i == edadnumero:
+            print(str(i))
+        else:
+            print(str(i), end=", ")
+
+
+def decrecer(edad):
+    i = 1
+    edadnumero = int(edad)
+    k = edad
+
+    for i in range(i, edadnumero + 1):
+        if i == edadnumero:
+            print(str(k))
+        else:
+            print(str(k), end=", ")
+            k -= 1
+
+
+crecer(25)
+print("Y")
+decrecer(25)
