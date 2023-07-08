@@ -1,12 +1,19 @@
 import sqlite3
 
-
 class Modelo:
     def __init__(self):
         self.dbase = "contrasena.db"
         self.conexion = sqlite3.connect(self.dbase)
         self.cursor = self.conexion.cursor()
 
+    def mensaje(self, function_param):
+        def envoltura(arg):
+            print("Abriendo Conexion")
+            function_param(arg)
+            print("Conexion Abierta")
+        return envoltura
+
+    @mensaje
     def abrir_conexion(self):
         self.conexion = sqlite3.connect(self.dbase)
         self.cursor = self.conexion.cursor()
@@ -28,7 +35,7 @@ class Modelo:
 
         self.cursor.execute(sql)
         self.cerrar_conexion()
-
+        
     def alta(self, data):
         self.abrir_conexion()
 
@@ -42,6 +49,7 @@ class Modelo:
         sql = "DELETE FROM contrasena WHERE id = ?;"
         self.cursor.execute(sql, data)
         self.cerrar_conexion()
+        return "1"
 
     def editar(self, datos):
         self.abrir_conexion()
@@ -60,3 +68,4 @@ class Modelo:
         self.cerrar_conexion()
 
         return resultado
+    
