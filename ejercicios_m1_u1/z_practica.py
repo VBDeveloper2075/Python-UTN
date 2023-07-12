@@ -97,9 +97,171 @@ else:
 
 
 """
-Ejercicio 3
+Ejercicio 4
 Operadores lógicos "and" y "or"
 
+
 Hacer un programa que evalúe si un estudiante que ingresa en el instituto puede ser beneficiario de una beca, o no. El programa debe evaluar la distancia del alumno al lugar de estudio, si tiene hermanos, y cuál es el ingreso total familiar.
+
+"and" --- *y si además   ....y "or" --- *o si no   
+
+
+distancia_hogar=int(input("\n\t Introduce la distancia domicilio-instituto (en kilómetros): "))
+print("\n\t Distancia al Instituto: " + str(distancia_hogar))
+
+hermanos_escolarizados=int(input("\n\t Cantidad de hermanos actualmente escolarizados: "))
+print("\n\t Cantidad de hermanos escolarizados: " + str(hermanos_escolarizados))
+
+salario_familiar=int(input("\n\t Introduce el salario mensual que recibe la familia: "))
+print("\n\t Salario mensual de la familia: " + str(salario_familiar))
+
+if distancia_hogar>40 and hermanos_escolarizados>3 and salario_familiar<80000:
+    print("\n\t Tienes derecho a la Beca")
+    
+else: 
+    print("\n\t No tienes derecho a la Beca")
+
+# también podría poner que aunque no cumpla con la cantidad de hermanos o la distancia, si tiene un sueldo muy bajo obtenga igualmente la beca. entonces uso el operador "or"
+
+distancia_hogar=int(input("\n\t Introduce la distancia domicilio-instituto (en kilómetros): "))
+print("\n\t Distancia al Instituto: " + str(distancia_hogar))
+
+hermanos_escolarizados=int(input("\n\t Cantidad de hermanos actualmente escolarizados: "))
+print("\n\t Cantidad de hermanos escolarizados: " + str(hermanos_escolarizados))
+
+salario_familiar=int(input("\n\t Introduce el salario mensual que recibe la familia: "))
+print("\n\t Salario mensual de la familia: " + str(salario_familiar))
+
+if distancia_hogar>40 and hermanos_escolarizados>3 or salario_familiar<80000:
+    print("\n\t Tienes derecho a la Beca")
+    
+else: 
+    print("\n\t No tienes derecho a la Beca")
+
+"""
+
+"""
+Ejercicio 5
+
+bucle for
+
+for i in  [1,2,3]:
+  print ("Hola")
+  
+  # así imprime ehola en cada iteración:
+for i in  ["primavera","verano","otoño","invierno"]:
+  print ("Hola")
+
+# así imprime el valor de la variable i:
+for i in  ["primavera","verano","otoño","invierno"]:
+  print (i) 
+
+
+"""
+
+"""
+Ejercicio 6
+
+Identificar si el mail que ingresó el usuario es correcto, evaluando si ingresó el @ y el punto (de .com, .org...)
+
+email = False
+
+for i in "vero@gmail.com":
+    if i == "@":
+        email = True
+
+if email:
+    print("El mail es correcto")
+else:
+    print("El mail es correcto")
+    
+"""
+
+
+# email = False
+# miEmail = input("\n\t introduce tu correo electrónico:  ")
+
+# for i in miEmail:
+#     if i == "@":
+#         email = True
+
+# if email:
+#     print("El mail es correcto")
+# else:
+#     print("El mail es correcto")
+
+"""
+Ejercicio 7
+
+'in range' quiere decir que recorra cierto rango
+acá se pone f"" string  para que imprima la variable en cada vuelta. Dicha variable: "i" se pone entre llaves.
+
+for i in range(5):
+    print(f"valor de la variable {i}")
+
+- también se puede usar para indicar que queremos trabajar con los datos entre determinado rango. en el ejemplo se trabaja con los números del 5 al 49 y saltando de 3 en 3.
+
+for i in range(5,50,3):
+    print(f"valor de la variable {i}")
+
+-----
+Ahora queremos validar el mail que ingresa un usuario.
+
+contiene_arroba = False
+
+email = input("\n\t Introduce tu email: ")
+
+for i in range(len(email)):
+    if email[i] == "@":
+        contiene_arroba = True
+
+if contiene_arroba:
+    print("Email correcto")
+
+else:
+    print("Email incorrecto")
+
+Se puede mejorar así:
+
+email=input("Introduce tu email, por favor: ")
+
+for i in email:
+
+    if i=="@":
+        
+        arroba:True
+        
+        break;
+
+else:
+
+    arroba=False
+
+print(arroba)
+
+"""
+
+    
+"""
+Ejercicio 8
+ Bucle while  ... mientras que:...
+ 
+ i=1
+ while i<=10
+     print("Ejecución" + str(i))
+     i=i+1  
+
+print("Terminó la ejecución")
+ 
+"""
+"""
+edad=int(input("Introduce tu edad por favor: "))
+
+while edad<5 or edad>100:
+    print("\n\t Has introducido una edad incorrecta. Vuelve a intentarlo")
+    edad=int(input("Introduce tu edad por favor: "))
+  
+  print("\n\t Gracias por colaborar. Puedes pasar.")
+  print("\n\t Edad del aspirante " + str(edad))
 
 """
