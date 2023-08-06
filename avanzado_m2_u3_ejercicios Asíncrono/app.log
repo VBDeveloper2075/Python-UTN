@@ -1,0 +1,5 @@
+DEBUG:root:El host pepe.com no está disponible
+INFO:root:El host pepe.com no está disponible
+WARNING:root:El host pepe.com no está disponible
+ERROR:root:El host pepe.com no está disponible
+CRITICAL:root:El host pepe.com no está disponible

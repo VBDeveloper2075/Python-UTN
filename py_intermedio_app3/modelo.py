@@ -6,14 +6,14 @@ class Modelo:
         self.conexion = sqlite3.connect(self.dbase)
         self.cursor = self.conexion.cursor()
 
-    def mensaje(self, function_param):
+    """def mensaje(self, function_param):
         def envoltura(arg):
             print("Abriendo Conexion")
             function_param(arg)
             print("Conexion Abierta")
         return envoltura
 
-    @mensaje
+    @mensaje"""
     def abrir_conexion(self):
         self.conexion = sqlite3.connect(self.dbase)
         self.cursor = self.conexion.cursor()
